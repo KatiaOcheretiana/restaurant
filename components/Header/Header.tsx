@@ -38,7 +38,7 @@ export default function Header() {
 
       <ul className={styles.socialmedia}>
         {socialMedia.map((item, index) => (
-          <li key={index}>
+          <li key={index} className={styles["socialmedia-item"]}>
             <a href={item.link} target="_blank" rel="noopener noreferrer">
               {item.icon}
             </a>

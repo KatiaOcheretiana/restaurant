@@ -1,0 +1,27 @@
+.section {
+  height: 650px;
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(../../public/images/river-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.title {
+  font-weight: 400;
+  font-size: 64px;
+  color: #fff;
+  font-family: var(--font-italianno);
+}
+
+.text {
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+}
