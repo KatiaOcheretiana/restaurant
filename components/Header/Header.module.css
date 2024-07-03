@@ -1,0 +1,41 @@
+.header {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  display: flex;
+  align-items: center;
+  gap: 152px;
+}
+
+.text {
+  font-size: 18px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 152px;
+}
+
+.logo-title {
+  font-size: 40px;
+  font-weight: 400;
+  font-family: var(--font-italianno);
+  position: relative;
+}
+
+.logo-title::after {
+  position: absolute;
+  content: "";
+  width: 200px;
+  height: 2px;
+  bottom: 0;
+  right: -6px;
+  background-color: #fcac45;
+}
+
+.socialmedia {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
