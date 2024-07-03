@@ -19,32 +19,34 @@ const socialMedia = [
 
 export default function Header() {
   return (
-    <header className={`container ${styles.header}`}>
-      <nav>
-        <ul className={styles.nav}>
-          <li className={styles.text}>
-            <NavLink href="/" title="Home" />
-          </li>
-          <li className={styles.text}>
-            <NavLink href="/menu" title="Menu" />
-          </li>
+    <header className={styles.header}>
+      <div className={`container ${styles.box}`}>
+        <nav>
+          <ul className={styles.nav}>
+            <li className={styles.text}>
+              <NavLink href="/" title="Home" />
+            </li>
+            <li className={styles.text}>
+              <NavLink href="/menu" title="Menu" />
+            </li>
+          </ul>
+        </nav>
+
+        <h2 className={styles["logo-title"]}>Selve Restaurant</h2>
+        <a href="#contacts" className={styles.text}>
+          Contacts
+        </a>
+
+        <ul className={styles.socialmedia}>
+          {socialMedia.map((item, index) => (
+            <li key={index} className={styles["socialmedia-item"]}>
+              <a href={item.link} target="_blank" rel="noopener noreferrer">
+                {item.icon}
+              </a>
+            </li>
+          ))}
         </ul>
-      </nav>
-
-      <h2 className={styles["logo-title"]}>Selve Restaurant</h2>
-      <a href="#contacts" className={styles.text}>
-        Contacts
-      </a>
-
-      <ul className={styles.socialmedia}>
-        {socialMedia.map((item, index) => (
-          <li key={index} className={styles["socialmedia-item"]}>
-            <a href={item.link} target="_blank" rel="noopener noreferrer">
-              {item.icon}
-            </a>
-          </li>
-        ))}
-      </ul>
+      </div>
     </header>
   );
 }

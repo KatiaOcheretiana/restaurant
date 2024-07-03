@@ -1,0 +1,13 @@
+.menu-wrapper {
+  margin-top: 65px;
+  margin-bottom: 100px;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 35px;
+  font-family: var(--font-italianno);
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
