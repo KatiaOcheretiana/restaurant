@@ -19,7 +19,7 @@ const socialMedia = [
 
 export default function Header() {
   return (
-    <div className={`container ${styles.header}`}>
+    <header className={`container ${styles.header}`}>
       <nav>
         <ul className={styles.nav}>
           <li className={styles.text}>
@@ -32,7 +32,7 @@ export default function Header() {
       </nav>
 
       <h2 className={styles["logo-title"]}>Selve Restaurant</h2>
-      <a href="#" className={styles.text}>
+      <a href="#contacts" className={styles.text}>
         Contacts
       </a>
 
@@ -45,6 +45,6 @@ export default function Header() {
           </li>
         ))}
       </ul>
-    </div>
+    </header>
   );
 }

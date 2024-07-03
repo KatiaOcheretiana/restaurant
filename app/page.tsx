@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
 import styles from "./page.module.css";
 import Hero from "@/components/Hero/Hero";
 import About from "@/components/About/About";
 
 import { Suspense } from "react";
 import { Meals } from "@/components/Meals";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -13,12 +13,15 @@ export default function Home() {
       <Hero />
       <div className="container">
         <About />
-        <div>
-          <h3>Menu</h3>
+        <div className={styles["menu-wrapper"]}>
+          <h3 className={styles.title}>Menu</h3>
           <Suspense fallback={<p>Loading..</p>}>
             <Meals times={7} />
           </Suspense>
         </div>
+        <Link href="/menu">
+          <button className={styles.button}>MORE</button>
+        </Link>
       </div>
     </main>
   );
