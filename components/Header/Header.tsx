@@ -3,6 +3,7 @@ import styles from "./Header.module.css";
 
 import Navigation from "./Navigation/Navigation";
 import SocialMedia from "./SocialMedia/SocialMedia";
+import MobileHeader from "./MobileHeader/MobileHeader";
 
 export default function Header() {
   return (
@@ -15,6 +16,9 @@ export default function Header() {
         </a>
 
         <SocialMedia />
+      </div>
+      <div className={styles.mobile}>
+        <MobileHeader />
       </div>
     </header>
   );

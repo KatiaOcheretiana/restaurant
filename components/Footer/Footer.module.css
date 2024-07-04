@@ -68,3 +68,92 @@
   font-size: 11px;
   text-align: center;
 }
+
+@media screen and (max-width: 767px) {
+  .footer {
+    background-color: #ededed;
+    padding: 0;
+    padding-bottom: 21px;
+  }
+
+  .footer::before {
+    height: 0;
+  }
+
+  .info {
+    margin-bottom: 44px;
+
+    padding: 10px 57px 0;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .info::after {
+    position: absolute;
+    content: "";
+    width: 100vh;
+    height: 1px;
+    background-color: var(--color-underline);
+    bottom: -26px;
+    right: 0;
+  }
+
+  .box-style {
+    order: 0;
+    width: 100%;
+  }
+
+  .box-location {
+    order: 1;
+    width: 76px;
+    align-items: start;
+  }
+
+  .box-style::after {
+    height: 0px;
+  }
+
+  .box-style::before {
+    height: 0px;
+  }
+
+  .title-schedule {
+    position: relative;
+    width: 104px;
+    margin: 0 auto;
+  }
+
+  .title-schedule::after {
+    position: absolute;
+    content: "";
+    width: 116px;
+    height: 1px;
+    background-color: var(--color-underline);
+    bottom: 0;
+    right: 0;
+  }
+
+  .title-soc-loc {
+    position: relative;
+  }
+
+  .title-soc-loc::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-underline);
+    bottom: 5px;
+    right: 0;
+  }
+
+  .text {
+    font-size: 11px;
+    margin-top: 10px;
+  }
+}

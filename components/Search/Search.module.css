@@ -50,3 +50,9 @@
 .input:hover {
   border-color: var(--color-underline);
 }
+
+@media screen and (max-width: 767px) {
+  .input {
+    width: 360px;
+  }
+}

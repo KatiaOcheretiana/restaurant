@@ -9,3 +9,13 @@
 .menu-wrapper {
   margin-bottom: 131px;
 }
+
+@media screen and (max-width: 767px) {
+  .title {
+    margin-bottom: 73px;
+  }
+
+  .menu-wrapper {
+    margin-bottom: 37px;
+  }
+}

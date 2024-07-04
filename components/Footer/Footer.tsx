@@ -5,19 +5,26 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.info}>
-        <div>
-          <h4 className={styles.title}>Location</h4>
+        <div className={styles["box-location"]}>
+          <h4 className={`${styles.title} ${styles["title-soc-loc"]}`}>
+            Location
+          </h4>
           <p className={styles.text}>130 Fulton St, New York</p>
           <p className={styles.text}>NY 10038, USA</p>
         </div>
         <div className={styles["box-style"]}>
-          <h4 className={styles.title}>Opening hours</h4>
+          <h4 className={`${styles.title} ${styles["title-schedule"]}`}>
+            Opening hours
+          </h4>
           <p className={styles.text}>Mon - Sat: 11:00 - 23:00</p>
           <p className={styles.text}>Sun: 11:00 - 19:00</p>
           <p className={styles.text}>Food in the restaurant and takeaway!</p>
         </div>
         <div>
-          <h4 className={styles.title} style={{ marginBottom: "7px" }}>
+          <h4
+            className={`${styles.title} ${styles["title-soc-loc"]}`}
+            style={{ marginBottom: "7px" }}
+          >
             Sociale
           </h4>
           <ul id="contacts">

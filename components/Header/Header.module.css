@@ -32,5 +32,23 @@
   background-color: var(--color-underline);
 }
 
+.mobile {
+  display: none;
+}
+
 @media screen and (max-width: 767px) {
+  .header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .box {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+    padding-left: 51px;
+    padding-right: 30px;
+  }
 }

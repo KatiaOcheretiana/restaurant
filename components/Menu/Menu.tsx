@@ -23,6 +23,7 @@ export default function Menu({ meals }: MenuProps) {
       <ul className={styles.list}>
         {visibleMeals.map((item) => (
           <li key={item.idMeal} className={styles["list-item"]}>
+            <h3 className={styles["title-mob"]}>{item.strMeal}</h3>
             <div className={styles["content-wrapper"]}>
               <h3 className={styles.title}>{item.strMeal}</h3>
               <p className={styles.description}>{item.strInstructions}</p>

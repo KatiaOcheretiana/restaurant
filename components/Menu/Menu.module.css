@@ -50,6 +50,10 @@
   margin-bottom: 8px;
 }
 
+.title-mob {
+  display: none;
+}
+
 .description {
   font-size: 14px;
   text-align: justify;
@@ -76,4 +80,68 @@
 .button:hover {
   background-color: var(--color-underline);
   color: white;
+}
+
+@media screen and (max-width: 767px) {
+  .list {
+    gap: 30px;
+  }
+
+  .list-item {
+    flex-direction: column;
+    gap: 10px;
+    height: 324px;
+    box-sizing: border-box;
+  }
+
+  .image-wrapper {
+    width: 100vh;
+    height: 200px;
+  }
+
+  .title-mob {
+    display: block;
+    font-weight: 400;
+    font-size: 28px;
+    font-family: var(--font-italianno);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+
+    order: 0;
+  }
+
+  .description {
+    -webkit-line-clamp: 5;
+  }
+
+  .title {
+    display: none;
+  }
+
+  .list-item:nth-child(2n + 1) {
+    flex-direction: column;
+  }
+
+  .content-wrapper {
+    padding: 0;
+    width: 100%;
+    padding: 0 10px;
+
+    order: 1;
+  }
+
+  .list-item:not(:last-child)::after {
+    width: 96%;
+    height: 1px;
+    bottom: -15px;
+    right: 10px;
+    background-color: var(--color-underline);
+  }
+
+  .button {
+    margin-top: 30px;
+    padding: 10px 80px;
+  }
 }

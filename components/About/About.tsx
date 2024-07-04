@@ -6,7 +6,7 @@ import styles from "./About.module.css";
 export default function About() {
   return (
     <section className={styles.section}>
-      <div>
+      <div className={styles.content}>
         <h3 className={styles.title}>About Us</h3>
         <p className={styles.description}>
           I&apos;m a paragraph. Click here to add your own text and edit me.
@@ -28,8 +28,9 @@ export default function About() {
       <Image
         src={chefImage}
         alt="Chef"
-        width={540}
-        height={301}
+        // width={540}
+        // height={301}
+        className={styles.image}
         loading="lazy"
         quality={100}
       />
