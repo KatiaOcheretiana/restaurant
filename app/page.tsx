@@ -19,9 +19,6 @@ export default function Home() {
             <Meals times={7} />
           </Suspense>
         </div>
-        <Link href="/menu">
-          <button className={styles.button}>MORE</button>
-        </Link>
       </div>
     </main>
   );

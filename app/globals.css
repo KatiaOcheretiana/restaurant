@@ -75,3 +75,11 @@ a:visited {
 .active {
   font-weight: bold;
 }
+
+.error-box {
+  min-height: 55vh;
+
+  font-family: var(--font-manrope);
+  text-align: center;
+  margin-top: 60px;
+}

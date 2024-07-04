@@ -1,23 +1,27 @@
-import Image from "next/image";
-import React from "react";
-import styles from "./Menu.module.css";
+"use client";
 
-type MealType = {
-  idMeal: string;
-  strMeal: string;
-  strInstructions: string;
-  strMealThumb: string;
-};
+import Image from "next/image";
+import React, { useState } from "react";
+import styles from "./Menu.module.css";
+import { MealType } from "@/types";
 
 type MenuProps = {
   meals: MealType[];
 };
 
 export default function Menu({ meals }: MenuProps) {
+  const [visibleCount, setVisibleCount] = useState(5);
+
+  const handleShowMore = () => {
+    setVisibleCount((prevCount) => prevCount + 5);
+  };
+
+  const visibleMeals = meals.slice(0, visibleCount);
+
   return (
     <div>
       <ul className={styles.list}>
-        {meals.map((item) => (
+        {visibleMeals.map((item) => (
           <li key={item.idMeal} className={styles["list-item"]}>
             <div className={styles["content-wrapper"]}>
               <h3 className={styles.title}>{item.strMeal}</h3>
@@ -35,6 +39,11 @@ export default function Menu({ meals }: MenuProps) {
           </li>
         ))}
       </ul>
+      {visibleCount < meals.length && (
+        <button className={styles.button} onClick={handleShowMore}>
+          MORE
+        </button>
+      )}
     </div>
   );
 }

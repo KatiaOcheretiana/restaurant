@@ -4,15 +4,24 @@ import Search from "@/components/Search/Search";
 import { searchMeals } from "@/lib/meals";
 import { Suspense } from "react";
 import styles from "./page.module.css";
+import LoadingPage from "../loading-out";
+import { MealType } from "@/types";
 
 type MealsByQueryPropsType = {
   query: string;
 };
 
-export async function MealsByQuery({ query }: MealsByQueryPropsType) {
-  const meals = await searchMeals(query);
+async function MealsByQuery({ query }: MealsByQueryPropsType) {
+  const meals: MealType[] = await searchMeals(query);
 
-  return <Menu meals={meals} />;
+  let menuContent = (
+    <p className={styles.text}>No dishes found. Try to search something else</p>
+  );
+  if (meals.length > 0) {
+    menuContent = <Menu meals={meals} />;
+  }
+
+  return menuContent;
 }
 
 export default function MenuPage({
@@ -29,8 +38,8 @@ export default function MenuPage({
       <h3 className={styles.title}>Menu</h3>
       <Search />
       <div className={styles["menu-wrapper"]}>
-        <Suspense key={query} fallback={<p>Loading...</p>}>
-          {!query ? <Meals times={7} /> : <MealsByQuery query={query} />}
+        <Suspense key={query} fallback={<LoadingPage />}>
+          {!query ? <Meals times={5} /> : <MealsByQuery query={query} />}
         </Suspense>
       </div>
     </div>

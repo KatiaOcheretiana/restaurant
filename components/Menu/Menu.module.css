@@ -59,3 +59,21 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.button {
+  border: 2px solid var(--color-underline);
+  background-color: white;
+  border-radius: 3px;
+  padding: 15px 106px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 83px;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: var(--color-underline);
+  color: white;
+}

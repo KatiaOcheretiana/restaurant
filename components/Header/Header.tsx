@@ -1,51 +1,20 @@
 import React from "react";
-import NavLink from "../NavLink";
 import styles from "./Header.module.css";
-import Twitter from "../../public/icons/twitter.svg";
-import Facebook from "../../public/icons/facebook.svg";
-import Instagram from "../../public/icons/instagram.svg";
 
-const socialMedia = [
-  { icon: <Twitter width={28} height={28} />, link: "https://x.com/" },
-  {
-    icon: <Facebook width={28} height={28} />,
-    link: "https://www.facebook.com/",
-  },
-  {
-    icon: <Instagram width={28} height={28} />,
-    link: "https://www.instagram.com/",
-  },
-];
+import Navigation from "./Navigation/Navigation";
+import SocialMedia from "./SocialMedia/SocialMedia";
 
 export default function Header() {
   return (
     <header className={styles.header}>
       <div className={`container ${styles.box}`}>
-        <nav>
-          <ul className={styles.nav}>
-            <li className={styles.text}>
-              <NavLink href="/" title="Home" />
-            </li>
-            <li className={styles.text}>
-              <NavLink href="/menu" title="Menu" />
-            </li>
-          </ul>
-        </nav>
-
+        <Navigation />
         <h2 className={styles["logo-title"]}>Selve Restaurant</h2>
         <a href="#contacts" className={styles.text}>
           Contacts
         </a>
 
-        <ul className={styles.socialmedia}>
-          {socialMedia.map((item, index) => (
-            <li key={index} className={styles["socialmedia-item"]}>
-              <a href={item.link} target="_blank" rel="noopener noreferrer">
-                {item.icon}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <SocialMedia />
       </div>
     </header>
   );
