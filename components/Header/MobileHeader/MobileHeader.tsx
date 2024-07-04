@@ -43,8 +43,8 @@ export default function MobileHeader() {
                 <p className={styles.text}>Contacts</p>
                 <a href="tel:+380777777777" className={styles.number}>
                   +380 (77) 77 77 777
-                </a>{" "}
-                <SocialMedia />{" "}
+                </a>
+                <SocialMedia />
               </div>
             </div>
           </dialog>

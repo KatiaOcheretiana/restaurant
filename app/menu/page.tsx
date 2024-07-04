@@ -31,8 +31,6 @@ export default function MenuPage({
 }) {
   const query = searchParams?.query || "";
 
-  console.log(query);
-
   return (
     <div className="container">
       <h3 className={styles.title}>Menu</h3>

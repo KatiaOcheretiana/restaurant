@@ -46,21 +46,20 @@
     height: 100%;
     backdrop-filter: blur(4px);
     background: rgba(0, 0, 0, 0.3);
-    z-index: 1;
+    z-index: 4;
   }
 
   .modal {
     position: fixed;
-
     border: none;
     background-color: white;
-    z-index: 2;
+    z-index: 5;
     height: 100vh;
     border-radius: 12px 0 0 12px;
     width: 302px;
-
     top: 0;
-    right: 0 !important;
+    margin-left: auto;
+    margin-right: 0;
     padding: 20px;
     box-sizing: border-box;
   }
